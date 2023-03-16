@@ -71,8 +71,10 @@ const Dashboard = () => {
                     {users.map((user, index) => (
                         <tr key={user.id}>
                             <td>{index + 1}</td>
+                            <td><img src={user.image}/></td>
                             <td>{user.name}</td>
-                            <td>{user.email}</td>
+                            <td>{user.current_price}</td>
+                            <td>{user.market_cap}</td>
                         </tr>
                     ))}
  

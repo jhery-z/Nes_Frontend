@@ -25,20 +25,20 @@ const UserList = () => {
           <thead>
             <tr>
               <th>No</th>
+              <th>Items</th>
               <th>Name</th>
-              <th>User Name</th>
-              <th>Email</th>
-              <th>Contact</th>
+              <th>Current</th>
+              <th>Market</th>
             </tr>
           </thead>
           <tbody>
             {users.map((user, index) => (
               <tr key={user.id}>
                 <td>{index + 1}</td>
+                <td><img src={user.image}/></td>
                 <td>{user.name}</td>
                 <td>{user.current_price}</td>
                 <td>{user.market_cap}</td>
-                <td><img src={user.image}/></td>
                 <td>
                   <Link
                     to={`detail-all/${user.id}`}
